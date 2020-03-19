@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "firebase": "^5.7.0",
+    "@firebase/app": "^0.5.6",
+    "firebase": "^7.10.0",
     "firebase-admin": "^6.4.0",
     "firebase-tools": "^6.1.2",
     "moment": "^2.22.2",
@@ -30,6 +31,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.13.1"
   }
 }
