@@ -4,6 +4,7 @@ import Posts from './Posts';
 import { collectIdAndDocs } from '../utilities';
 import Authentication from './Authentication';
 import { auth } from '../firebase';
+import { createUserProfileDocument } from '../firebase'
 
 class Application extends Component {
   state = {
@@ -22,7 +23,9 @@ class Application extends Component {
         this.setState({ posts });
       });
 
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+
+      const user = await createUserProfileDocument(userAuth)
       console.log(user)
       this.setState({ user: user });
     });

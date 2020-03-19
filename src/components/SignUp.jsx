@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { auth } from '../firebase';
+import { createUserProfileDocument } from '../firebase'
 
 class SignUp extends Component {
   state = { displayName: '', email: '', password: '' };
@@ -15,8 +16,11 @@ class SignUp extends Component {
 
     const { email, password, displayName } = this.state;
     try {
+      //? this will create user signing up using email and password
       const { user } = await auth.createUserWithEmailAndPassword(email, password);
-      user.updateProfile({ displayName: displayName })
+
+      //? this will add propertiers to the user once it's been created. 
+      createUserProfileDocument(user, { displayName });
 
 
     } catch (error) {
