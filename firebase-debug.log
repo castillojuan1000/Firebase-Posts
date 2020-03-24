@@ -1,0 +1,66 @@
+[debug] [2020-03-24T01:15:38.319Z] ----------------------------------------------------------------------
+[debug] [2020-03-24T01:15:38.321Z] Command:       /usr/local/bin/node /Users/juancastillo/Desktop/Front-End Masters/Firebase-Posts/node_modules/.bin/firebase deploy
+[debug] [2020-03-24T01:15:38.321Z] CLI Version:   6.12.0
+[debug] [2020-03-24T01:15:38.321Z] Platform:      darwin
+[debug] [2020-03-24T01:15:38.321Z] Node Version:  v10.15.3
+[debug] [2020-03-24T01:15:38.322Z] Time:          Mon Mar 23 2020 21:15:38 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-03-24T01:15:38.322Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2020-03-24T01:15:38.338Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-24T01:15:38.338Z] > authorizing via signed-in user
+[debug] [2020-03-24T01:15:38.338Z] [iam] checking project thinkpiece-41ffc for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2020-03-24T01:15:38.340Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/thinkpiece-41ffc:testIamPermissions  
+
+[debug] [2020-03-24T01:15:38.614Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-24T01:15:38.617Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/thinkpiece-41ffc  
+ 
+[debug] [2020-03-24T01:15:38.799Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-24T01:15:40.092Z] TypeError: Cannot read property 'wanted' of undefined
+    at /Users/juancastillo/Desktop/Front-End Masters/Firebase-Posts/node_modules/firebase-tools/lib/checkFirebaseSDKVersion.js:37:51
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-03-24T01:20:17.717Z] ----------------------------------------------------------------------
+[debug] [2020-03-24T01:20:17.719Z] Command:       /usr/local/bin/node /Users/juancastillo/Desktop/Front-End Masters/Firebase-Posts/node_modules/.bin/firebase deploy
+[debug] [2020-03-24T01:20:17.719Z] CLI Version:   6.12.0
+[debug] [2020-03-24T01:20:17.719Z] Platform:      darwin
+[debug] [2020-03-24T01:20:17.719Z] Node Version:  v10.15.3
+[debug] [2020-03-24T01:20:17.720Z] Time:          Mon Mar 23 2020 21:20:17 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-03-24T01:20:17.720Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2020-03-24T01:20:17.731Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-24T01:20:17.731Z] > authorizing via signed-in user
+[debug] [2020-03-24T01:20:17.731Z] [iam] checking project thinkpiece-41ffc for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2020-03-24T01:20:17.733Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/thinkpiece-41ffc:testIamPermissions  
+
+[debug] [2020-03-24T01:20:18.915Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-24T01:20:18.918Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/thinkpiece-41ffc  
+ 
+[debug] [2020-03-24T01:20:19.034Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-24T01:20:20.187Z] TypeError: Cannot read property 'wanted' of undefined
+    at /Users/juancastillo/Desktop/Front-End Masters/Firebase-Posts/node_modules/firebase-tools/lib/checkFirebaseSDKVersion.js:37:51
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-03-24T01:24:36.759Z] ----------------------------------------------------------------------
+[debug] [2020-03-24T01:24:36.762Z] Command:       /usr/local/bin/node /Users/juancastillo/Desktop/Front-End Masters/Firebase-Posts/node_modules/.bin/firebase deploy
+[debug] [2020-03-24T01:24:36.763Z] CLI Version:   6.12.0
+[debug] [2020-03-24T01:24:36.763Z] Platform:      darwin
+[debug] [2020-03-24T01:24:36.763Z] Node Version:  v10.15.3
+[debug] [2020-03-24T01:24:36.764Z] Time:          Mon Mar 23 2020 21:24:36 GMT-0400 (Eastern Daylight Time)
+[debug] [2020-03-24T01:24:36.764Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2020-03-24T01:24:36.775Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-24T01:24:36.776Z] > authorizing via signed-in user
+[debug] [2020-03-24T01:24:36.776Z] [iam] checking project thinkpiece-41ffc for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2020-03-24T01:24:36.778Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/thinkpiece-41ffc:testIamPermissions  
+
+[debug] [2020-03-24T01:24:37.027Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-24T01:24:37.030Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/thinkpiece-41ffc  
+ 
+[debug] [2020-03-24T01:24:37.154Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-24T01:24:38.389Z] TypeError: Cannot read property 'wanted' of undefined
+    at /Users/juancastillo/Desktop/Front-End Masters/Firebase-Posts/node_modules/firebase-tools/lib/checkFirebaseSDKVersion.js:37:51
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[error] 
+[error] Error: An unexpected error has occurred.
