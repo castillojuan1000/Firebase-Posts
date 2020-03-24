@@ -1,49 +1,28 @@
 import React, { Component } from 'react';
-import { firestore } from '../firebase'
 import Posts from './Posts';
-import { collectIdAndDocs } from '../utilities';
 import Authentication from './Authentication';
-import { auth } from '../firebase';
-import { createUserProfileDocument } from '../firebase'
+import UserProfile from './UserProfile'
+import { Switch, Link, Route } from 'react-router-dom'
+import PostPage from './PostPage'
+
 
 class Application extends Component {
-  state = {
-    posts: [],
-    user: null,
-  };
 
-  unsubscribeFromFirestore = null;
-  unsubscribeFromAuth = null;
-
-  componentDidMount = async () => {
-    this.unsubscribeFromFirestore = firestore
-      .collection('posts')
-      .onSnapshot(snapshot => {
-        const posts = snapshot.docs.map(collectIdAndDocs);
-        this.setState({ posts });
-      });
-
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
-
-      const user = await createUserProfileDocument(userAuth)
-      console.log(user)
-      this.setState({ user: user });
-    });
-  };
-
-  componentWillUnmount = () => {
-    this.unsubscribeFromFirestore();
-    this.unsubscribeFromAuth();
-  };
 
   render() {
-    const { posts, user } = this.state;
-    console.log(this.state.posts)
+
     return (
       <main className="Application">
-        <h1>Think Piece</h1>
-        <Authentication user={user} />
-        <Posts posts={posts} />
+        <Link to='/'>
+          <h1>Think Piece</h1>
+        </Link>
+
+        <Authentication />
+        <Switch>
+          <Route exact path='/' component={Posts} />
+          <Route exact path='/profile' component={UserProfile} />
+          <Route exact path='/posts/:id' component={PostPage} />
+        </Switch>
       </main>
     );
   }

@@ -1,6 +1,7 @@
 import firebase from '@firebase/app'
 import 'firebase/firestore'
 import 'firebase/auth'
+import 'firebase/storage'
 
 const firebaseConfig = {
   apiKey: "AIzaSyA95-piOynDDZiANHxzz-TRitfdjM5_yOc",
@@ -15,8 +16,10 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 export const firestore = firebase.firestore();
-
+export const storage = firebase.storage();
 export const auth = firebase.auth();
+
+
 export const provider = new firebase.auth.GoogleAuthProvider();
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
@@ -35,11 +38,13 @@ export const createUserProfileDocument = async (user, additionalData) => {
   //!! if this snapshot does not exis go ahead and create one 
   if (!snapshot.exists) {
     const { displayName, email, photoURL } = user;
+
     const createdAt = new Date();
     try {
       await userRef.set({
         displayName: displayName,
         email: email,
+        photoURL: photoURL,
         createdAt: createdAt,
         ...additionalData
       })
@@ -54,9 +59,7 @@ export const createUserProfileDocument = async (user, additionalData) => {
 export const getUserDocument = async (uid) => {
   if (!uid) return null;
   try {
-    const userDocument = await firestore.collection('users').doc(uid).get()
-
-    return { uid, ...userDocument.data() }
+    return firestore.collection('users').doc(uid)
   } catch (error) {
     console.error(`Error fetching user`, error.message)
   }
